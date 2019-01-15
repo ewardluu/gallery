@@ -1,0 +1,25 @@
+.mat-dialog-content {
+    max-height: 80vh;
+    .container {
+        img {
+            width: 100%;;
+        }
+    }
+}
+.header-dialog-image {
+    display: flex;
+    justify-content: space-between;
+    .close-header  {
+        margin-bottom: 20px;
+    }
+}
+.title-dialog-image {
+    display: flex;
+    .mat-icon {
+        align-self: center;
+        margin-right: 10px;
+    }
+}
+.mat-dialog-actions{
+    float: right;
+}

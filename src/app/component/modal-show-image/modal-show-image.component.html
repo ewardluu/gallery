@@ -1,0 +1,13 @@
+<div class="header-dialog-image">
+    <h2 class="title-dialog-image" mat-dialog-title> <mat-icon color="#2b2b2b" >photo_camera</mat-icon>   Photographer: {{data.photographer}}</h2>
+    <button mat-button color="warn" class="close-header" (click)="closeDialog()"><mat-icon>clear</mat-icon> </button>
+</div>
+
+<mat-dialog-content>
+  <div class="container">
+        <img src="{{data.src.large2x}}" alt="photo">
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="action-close" mat-raised-button color="warn" (click)="closeDialog()">Close</button>
+</mat-dialog-actions>

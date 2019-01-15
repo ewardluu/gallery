@@ -1,0 +1,21 @@
+<div class="header-gallery">
+    <h1 class="title-gallery"> GALLERY </h1>
+</div>
+<ngx-loading 
+[show]="loading" [config]="{ animationType: NgxLoadingAnimationTypes.cubeGrid, primaryColour: '#ff9800' }"
+></ngx-loading>
+<div class="container-gallery" infinite-scroll 
+                              [infiniteScrollDistance]="1" 
+                              [infiniteScrollUpDistance]="2" 
+                              [infiniteScrollThrottle]="300"  
+                              (scrolled)="onScrollDown()" 
+                              >
+        <div class="gallery">
+            <div  class="gallery__item" *ngFor="let img of dataGallery; let i = index">
+              <a (click)="openDialog(img)" class="gallery__item--popup">
+                  <span>{{img.photographer}}</span>
+                  <img src="{{img.src.large}}" alt="photo">    
+              </a> 
+            </div>
+        </div> 
+</div>
