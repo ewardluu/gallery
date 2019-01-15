@@ -42,9 +42,7 @@ export class GalleryComponent implements OnInit {
   }
 
   onScrollDown (ev) {
-    console.log('scrolled down!!', ev);
     this.loadingImg = true;
-    console.log(this.loadingImg);
     this.page++;
     this.getGallery(this.page);
   }
